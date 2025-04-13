@@ -1,5 +1,30 @@
 # [Leetcode 50 SQL questions](https://leetcode.com/studyplan/top-sql-50/)
 
+> :exclamation: All queries are statements for **PostgreSQL** database. 
+
+* [Select](#select)  
+* [Basic Joins](#basic-joins)
+
+### Select
+
+#### 1757 Recyclable and low fat products
+:point_right: https://leetcode.com/problems/recyclable-and-low-fat-products/description/
+```
+SELECT product_id 
+FROM products
+WHERE low_fats = 'Y' AND recyclable = 'Y';
+```
+
+#### 584 Find customer referee
+:point_right: https://leetcode.com/problems/find-customer-referee/description/
+```
+SELECT name
+FROM customer
+WHERE customer.referee_id <> 2;
+```
+❗ From PostgreSQL documentation:  
+<> is the standard SQL notation for “not equal”. != is an alias, which is converted to <> at a very early stage of parsing. Hence, it is not possible to implement != and <> operators that do different things.
+
 ### Basic Joins
 
 #### 1378 Replace employee Id with the unique identifier  
