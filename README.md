@@ -33,6 +33,14 @@ FROM world
 WHERE area >= 3000000 OR population >= 25000000;
 ```
 
+#### 1148 Article views I
+:point_right: https://leetcode.com/problems/article-views-i/description/
+```
+SELECT DISTINCT ON (author_id) author_id AS id
+FROM views
+WHERE author_id = viewer_id;
+```
+
 ### Basic Joins
 
 #### 1378 Replace employee Id with the unique identifier  
