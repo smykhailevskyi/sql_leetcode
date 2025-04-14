@@ -25,6 +25,14 @@ WHERE customer.referee_id <> 2;
 ❗ From PostgreSQL documentation:  
 <> is the standard SQL notation for “not equal”. != is an alias, which is converted to <> at a very early stage of parsing. Hence, it is not possible to implement != and <> operators that do different things.
 
+#### 595 Big countries
+:point_right: https://leetcode.com/problems/big-countries/description/
+```
+SELECT name, population, area
+FROM world
+WHERE area >= 3000000 OR population >= 25000000;
+```
+
 ### Basic Joins
 
 #### 1378 Replace employee Id with the unique identifier  
