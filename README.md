@@ -41,6 +41,14 @@ FROM views
 WHERE author_id = viewer_id;
 ```
 
+#### 1683 Invalid tweets
+:point_right: https://leetcode.com/problems/invalid-tweets/description/
+```
+SELECT tweet_id
+FROM tweets
+WHERE length(content) > 15;
+```
+
 ### Basic Joins
 
 #### 1378 Replace employee Id with the unique identifier  
