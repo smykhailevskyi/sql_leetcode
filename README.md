@@ -79,3 +79,16 @@ FROM Sales
 JOIN product ON sales.product_id = product.product_id;
 ```
 
+#### 1581 Customer who visited but did not make any transactions   
+:point_right: https://leetcode.com/problems/customer-who-visited-but-did-not-make-any-transactions/  
+
+**LEFT JOIN**, **GROUP BY**, **COUNT**
+```
+SELECT v.customer_id, COUNT(*) AS count_no_trans
+FROM visits v
+LEFT JOIN transactions t
+ON v.visit_id = t.visit_id
+WHERE t.transaction_id IS NULL 
+GROUP BY v.customer_id;
+```
+
