@@ -96,6 +96,9 @@ GROUP BY v.customer_id;
 :point_right: https://leetcode.com/problems/rising-temperature/description/
 
 **INNER JOIN**, **INTERVAL**
+
+❗ Data/Time functions and operators in PostgreSQL documentation: https://www.postgresql.org/docs/current/functions-datetime.html
+
 ```
 SELECT w1.id
 FROM weather w1
