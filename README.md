@@ -92,3 +92,14 @@ WHERE t.transaction_id IS NULL
 GROUP BY v.customer_id;
 ```
 
+#### 197 Rising temperature   
+:point_right: https://leetcode.com/problems/rising-temperature/description/
+
+**INNER JOIN**, **INTERVAL**
+```
+SELECT w1.id
+FROM weather w1
+JOIN weather w2 ON w1.recordDate = w2.recordDate + INTERVAL '1 DAY'
+WHERE w1.temperature > w2.temperature;
+```
+
