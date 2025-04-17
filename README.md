@@ -106,3 +106,15 @@ JOIN weather w2 ON w1.recordDate = w2.recordDate + INTERVAL '1 DAY'
 WHERE w1.temperature > w2.temperature;
 ```
 
+#### 1661 Average time of process per machine   
+:point_right: https://leetcode.com/problems/average-time-of-process-per-machine/description/
+
+**INNER JOIN**, **ROUND**, **AVG**, **CAST**, **GROUP BY**
+
+```
+SELECT a.machine_id, ROUND(AVG(CAST(b.timestamp - a.timestamp AS DECIMAL)), 3) AS processing_time
+FROM activity a
+JOIN activity b ON a.machine_id = b.machine_id AND a.process_id = b.process_id AND a.activity_type = 'start' AND b.activity_type = 'end'
+GROUP BY a.machine_id;
+```
+
